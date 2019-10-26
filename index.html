@@ -28,10 +28,10 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <button id="btnstart" type="button" class="btn btn-success" class="labbel">Opção 1</button> 
-            </div>
+                <button id="opt1" type="button" class="btn btn-success" class="labbel">Lorem Ipsum is simply dummy text of the printing and typesetting</button> 
+            </div> <br> <br> <br>
             <div class="col">
-                <button id="btnstart" type="button" class="btn btn-primary" class="labbel">Opção 2</button>
+                <button id="opt2" type="button" class="btn btn-primary" class="labbel">Lorem Ipsum is simply dummy text of the printing and typesetting</button>
               </div>
             </div>
           </div>
@@ -41,14 +41,19 @@
     var clicks = 0;
     var nick = prompt ('Digite seu nome');
     var bemvindo = document.getElementById ('bemvindo');
-        bemvindo.innerHTML= "Bem Vindo " + nick;
+        bemvindo.innerHTML= "Bem Vindo ao jogo, " + nick;
     var fase = 1 ; document.getElementById('fase');
         fase.innerHTML= "Você está na fase " + fase;
     var btnstart = document.getElementById ('paddinng');
-    const clickstart = function(){
-    btnstart.addEventListener('click', ()=>{
-        delete(btnstart);})};
-
+    var opt1 = document.getElementById ('opt1');
+    var opt2 = document.getElementById ('opt2')
+    function click(opt1) {
+        addEventListener ("click,")
+    }
+    function click2(opt2) {
+        
+    }
+    
     
 </script>
 </html>
