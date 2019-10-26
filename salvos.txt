@@ -1,0 +1,2 @@
+<button id="btnstart" type="button" class="btn btn-success" class="labbel">Opção 1</button> 
+<button id="btnstart" type="button" class="btn btn-primary" class="labbel">Opção 2</button>

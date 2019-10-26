@@ -16,3 +16,10 @@ body{
 
 
 }
+.bordeeer{
+    border: 1px;
+    border-color: red;
+}
+.paragrafo{
+    color:yellow;
+}
