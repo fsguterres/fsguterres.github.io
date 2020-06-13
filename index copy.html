@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="renderizaJodo()">
+    <div class="jogo">
+        <div id="text"></div>
+        <!-- <div id="option1" onclick="click1()"></div>
+        <div id="option2" onclick="click2()"></div> -->
+        <button onclick="click1()">Ligar luz</button>
+        <button onclick="click2()">Desligar Luz</button>
+    </div>
+</body>
+<script type="text/javascript">
+    var jogo = [
+        {
+            texto:'Olá. Você deve escolher uma das opções a seguir para iniciar o jogo.',
+            opcao1:{
+                texto:' Matar o bin laden',
+                acao:1,
+            },
+            opcao2:{
+                texto:' Matar o obama',
+                acao:2,
+            }
+        },
+        {
+            texto:'Muito bem. Bin laden era um canalha mesmo.',
+            opcao1:{
+                texto:'Eu sabia!',
+                acao:3,
+            },
+            opcao2:{
+                texto:'É mermo é?',
+                acao:3,
+            }
+        },
+        {
+            texto:'Poxa... Obama era tao legal',
+            opcao1:{
+                texto:'Eita',
+                acao:0,
+            },
+            opcao2:{
+                texto:'que vacilo...',
+                acao:0,
+            }
+        }
+    ];
+    var index = 0;
+    var txt = document.getElementById("text");
+    var opt1 = document.getElementById("option1");
+    var opt2 = document.getElementById("option2");
+    
+    function renderizaJodo(){
+        // txt.innerHTML = jogo[index].texto;
+        // opt1.innerHTML = jogo[index].opcao1.texto;
+        // opt2.innerHTML = jogo[index].opcao2.texto;
+    }
+
+    function liga(){
+        console.log('liga');
+        fetch('https://maker.ifttt.com/trigger/ligar_luz/with/key/fp7oyG4-WAlZIwAbOFEplisPpnS0dcUKDlQrnePbC2c', {method: 'get'}).then().catch();
+        setTimeout(desliga(), 2000);
+    }
+    function desliga(){
+        console.log('desliga');
+        fetch('https://maker.ifttt.com/trigger/desligar_luz/with/key/fp7oyG4-WAlZIwAbOFEplisPpnS0dcUKDlQrnePbC2c', {method: 'get'}).then().catch();
+    }
+
+    const click1 = ()=>{
+        liga();
+        // index = jogo[index].opcao1.acao;
+        // renderizaJodo();    
+    }
+    const click2 = ()=>{
+        desliga();
+        // index = jogo[index].opcao2.acao;
+        // renderizaJodo();    
+    }
+    
+    
+    
+</script>
+</html>

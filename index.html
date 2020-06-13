@@ -19,7 +19,7 @@
 <br>
     <div class="container">
         <div class="row">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of <a href="site.html"> Ipsum.</a></p>   
+            <p id="quest"></p>   
         </div>  
     </div> 
     <br>
@@ -28,31 +28,40 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <button id="opt1" type="button" class="btn btn-success" class="labbel">Lorem Ipsum is simply dummy text of the printing and typesetting</button> 
+                <button id="opt1" type="button" class="btn btn-outline-warning" class="labbel"></button> 
             </div> <br> <br> <br>
             <div class="col">
-                <button id="opt2" type="button" class="btn btn-primary" class="labbel">Lorem Ipsum is simply dummy text of the printing and typesetting</button>
+                <button id="opt2" type="button" class="btn btn-outline-warning" class="labbel"></button>
               </div>
             </div>
           </div>
 </body>
-<script type="text/javascript">
+<script type="text/javascript">    
 
-    var clicks = 0;
     var nick = prompt ('Digite seu nome');
     var bemvindo = document.getElementById ('bemvindo');
         bemvindo.innerHTML= "Bem Vindo ao jogo, " + nick;
     var fase = 1 ; document.getElementById('fase');
-        fase.innerHTML= "Você está na fase " + fase;
-    var btnstart = document.getElementById ('paddinng');
+    fase.innerHTML= "Você está na fase " + fase;
     var opt1 = document.getElementById ('opt1');
-    var opt2 = document.getElementById ('opt2')
-    function click(opt1) {
-        addEventListener ("click,")
-    }
-    function click2(opt2) {
-        
-    }
+    var opt11 = 0;
+    opt1.innerHTML= "Lorem Ipsum is simply dummy text of the printing and typesetting";
+    var opt2 = document.getElementById ('opt2');
+    opt2.innerHTML= "Lorem Ipsum is simply dummy text of the printing and typesetting";
+    var quest = document.getElementById ('quest');
+    quest.innerHTML= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."; 
+    
+    opt1.addEventListener ('click', ()=>{
+        if(opt11 == 0){
+            opt11++;
+            opt1.innerHTML= ""
+            quest.innerHTML= "Você se meteu em uma encrenca e está sem comida no meio da floresta e já está escuro, mas você ve uma luz muito distante";}
+    })
+    opt2.addEventListener ('click', ()=>{
+        quest.innerHTML= "Você clicou no segundo botão";
+    });
+
+    
     
     
 </script>
